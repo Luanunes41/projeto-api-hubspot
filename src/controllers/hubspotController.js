@@ -14,7 +14,7 @@ async createContact(req, res) {
 
 async createDeal(req, res) {
         try {
-      const dealProperties = req.body; // Deve conter { dealname: "...", amount: "...", pipeline: "...", dealstage: "..." }
+      const dealProperties = req.body; 
       const newDeal = await hubspotService.createDeal(dealProperties);
       res.status(201).json({ message: 'Negócio criado com sucesso no HubSpot!', deal: newDeal });
     } catch (error) {
